@@ -1,6 +1,8 @@
 # Figma Reader Plugin
 
-Read, inspect, and analyze Figma designs directly from Claude Code. Extract layers as pixel-perfect CSS/HTML, export SVGs and assets — all powered by [figma-ds-cli](https://github.com/nicholasgriffintn/figma-ds-cli), no API key needed.
+Read, inspect, and analyze Figma designs directly from Claude Code. Extract layers as pixel-perfect CSS/HTML, export SVGs and assets — all without an API key.
+
+**No separate CLI installation needed** — the [figma-ds-cli](https://github.com/silships/figma-cli) is bundled directly in this plugin and set up automatically on first use.
 
 ## What It Does
 
@@ -13,10 +15,19 @@ Claude automatically uses this skill when you ask about your Figma file. It can:
 - **Analyze design quality** — lint for accessibility, consistency, hardcoded colors
 - **Export as code** — JSX, CSS custom properties, Tailwind config
 
+## Installation
+
+```bash
+/install-plugin https://github.com/KUN1803/Claude-figma-reader-plugin
+```
+
+Dependencies are installed automatically on first use.
+
 ## Prerequisites
 
-- [figma-ds-cli](https://github.com/nicholasgriffintn/figma-ds-cli) installed in your project
-- Figma Desktop running and connected (`node src/index.js connect`)
+- **Figma Desktop** must be running
+- **Node.js 18+** installed
+- **Connect once** per session — Claude handles this automatically
 
 ## Usage
 
@@ -60,6 +71,10 @@ Automatically detects vector nodes and image fills during extraction.
 |--------|---------|
 | `extract-css-props.js` | Extracts ALL visual properties from a Figma node recursively |
 | `extract-svg.js` | Exports any node as inline SVG code |
+
+## Bundled CLI
+
+This plugin includes a bundled copy of [figma-ds-cli](https://github.com/silships/figma-cli) (MIT License, by Sil Bormuller). The CLI connects to Figma Desktop directly via Chrome DevTools Protocol — no API key required.
 
 ## Author
 
