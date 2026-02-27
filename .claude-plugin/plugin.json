@@ -1,0 +1,7 @@
+{
+  "name": "figma-reader",
+  "description": "Read, inspect, and analyze Figma designs via figma-ds-cli. Extract layers as pixel-perfect CSS/HTML, export SVGs and assets — all without an API key.",
+  "author": {
+    "name": "Kai Nottrodt"
+  }
+}
